@@ -9,7 +9,7 @@
 - (留空, 日后补充)
 
 # 实验过程
-- 参照[part1.md](../1/part1.md)新建一个exe工程
+- 参照[part1.md](../part1/part1.md)新建一个exe工程
 - 添加源文件[IATHook.cpp](IATHook.cpp)与[main.cpp](main.cpp)
 - 编译执行
 
