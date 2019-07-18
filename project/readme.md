@@ -8,7 +8,7 @@
 # 一. 实验思路
 - 首先要提取反汇编代码. 通过`Visual Studio`自带的开发人员工具执行
     ```cmd
-    dumpbin /DISASM TheGreatestBrain.exe > asm.txt
+    dumpbin /DISASM TheGreatestBrain.exe > disasm.txt
     ```
     得到反汇编结果[disasm.txt](./disasm.txt). 在其中我们可以提取出所有的函数名全局变量名, 以及这些函数与变量的地址
     ```bash
@@ -46,7 +46,7 @@
     - `szOldEntry`的空间通过`malloc`函数分配, 否则`szOldEntry`所在内存页的权限无法被修改, 导致在执行时冲突. 使用`malloc`分配的空间可以在后续使用`VirtualProtect`函数进行修改
     - 为什么`malloc`的大小是7+5而不是5+5, 这是为了保持机器指令完整不被截断
     - 计算`E9 jmp`指令所使用的相对地址时, 注意起始地址是**当前指令下一条指令的地址**
-- 接下来编写攻击函数`void target();`, 这里不展开叙述, 简单来说就是根据相应的数据再合适的时候模拟按下对应的按键以实现自动操作. 攻击函数`target`本身不难, 难的是把它用起来
+- 接下来编写攻击函数`void target();`, 这里不展开叙述, 简单来说就是根据相应的数据再合适的时候模拟按下对应的按键以实现自动操作. 攻击函数`target`本身不难, 难的是把它用起来
 - 然后制作`szCode`
     ```c
     BYTE* szCode = (BYTE*)malloc(5+5);
