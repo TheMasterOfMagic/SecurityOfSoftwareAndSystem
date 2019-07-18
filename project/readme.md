@@ -1,7 +1,7 @@
 # 软件与系统安全大作业
 
 # 零. 课题简介
-- 该大作业将以[大一暑期实践时使用C语言编写的小游戏](./TheGreatestBrain.exe)([Github](https://github.com/TheMasterOfMagic/TheGreatestBrain))为受害者程序, 在**脱离源代码**的前提下, 尝试逆向分析受害者程序, 通过DLL注入与远程线程启动的方式执行任意代码以实现**自动操作**, 从而模拟一次外挂制作的过程
+- 该大作业将以大一暑期实践时使用C语言编写的小游戏([→Github源代码](https://github.com/TheMasterOfMagic/TheGreatestBrain))([→编译好的可执行文件](./TheGreatestBrain.exe))为受害者程序, 在**脱离源代码**的前提下, 尝试逆向分析受害者程序, 通过DLL注入与远程线程启动的方式执行任意代码以实现**自动操作**, 从而模拟一次外挂制作的过程
 - 受害者程序通过`Visual Studio 2017 Community`在`Release X86`模式下禁用所有优化后编译生成
 - 游戏简介: 游戏分为<font style="color:red">红</font><font style="color:yellow">黄</font><font style="color:cyan">蓝</font><font style="color:lightgreen">绿</font>4个子游戏. 玩家需同时操作4个子游戏避开障碍物以坚持尽可能长的时间. 每个子游戏单独来看都很简单, 但4个子游戏同时操作则有一定难度
 
